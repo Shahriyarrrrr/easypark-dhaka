@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Easy Park — Dhaka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">P</div>
+        <div class="brand-text">
+          <div class="brand-title">EASY <span>PARK</span></div>
+          <div class="brand-sub">Secure parking across Dhaka</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#plans" class="nav-link">Plans</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="locationBtn" class="pill">Dhaka Locations</button>
+        <button id="loginBtn" class="btn-primary">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="home">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <div class="eyebrow">Welcome to</div>
+          <h1 class="hero-title">EASY <span>PARK</span></h1>
+          <p class="hero-sub">Find secure parking spaces across Dhaka. Reserve, pay, and park — fast and worry-free.</p>
+
+          <div class="hero-badges">
+            <span class="badge">24/7 CCTV</span>
+            <span class="badge">Insurance</span>
+            <span class="badge">Easy Payment</span>
+          </div>
+        </div>
+
+        <aside class="booking-card" aria-label="Booking Panel">
+          <form id="bookingForm" novalidate>
+            <h3 class="card-title">Book Now</h3>
+
+            <label class="label">Select Location</label>
+            <select id="location" required>
+              <option value="">-- Select Location in Dhaka --</option>
+              <option value="Gulshan">Gulshan</option>
+              <option value="Banani">Banani</option>
+              <option value="Dhanmondi">Dhanmondi</option>
+              <option value="Uttara">Uttara</option>
+              <option value="Mohakhali">Mohakhali</option>
+              <option value="Mirpur">Mirpur</option>
+            </select>
+
+            <div class="row">
+              <div class="col">
+                <label class="label">Check-in Date</label>
+                <input id="checkin-date" type="date" required>
+              </div>
+              <div class="col">
+                <label class="label">Time</label>
+                <input id="checkin-time" type="time" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label class="label">Check-out Date</label>
+                <input id="checkout-date" type="date" required>
+              </div>
+              <div class="col">
+                <label class="label">Time</label>
+                <input id="checkout-time" type="time" required>
+              </div>
+            </div>
+
+            <label class="label">Promo Code (optional)</label>
+            <div class="promo-row">
+              <input id="promo" type="text" placeholder="e.g., SAVE10">
+              <button type="button" id="applyPromo" class="btn-tertiary">Apply</button>
+            </div>
+
+            <div class="cta-row">
+              <div class="price-preview">Total: <strong id="pricePreview">৳0.00</strong></div>
+              <div class="cta-actions">
+                <button type="button" id="clearBtn" class="btn-tertiary">Clear</button>
+                <button type="submit" class="btn-primary">Confirm Booking</button>
+              </div>
+            </div>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section id="plans" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Parking Plans</h2>
+          <p class="muted">Choose a plan that fits your needs.</p>
+        </div>
+
+        <div class="pricing-cards">
+          <article class="plan-card" data-price="1200" data-plan="Regular">
+            <div class="plan-head">Regular Plan</div>
+            <div class="plan-price">৳ <span class="price-num">1,200</span></div>
+            <ul class="plan-features">
+              <li>Basic Security</li>
+              <li>24/7 Access</li>
+              <li>Pay-as-you-go</li>
+            </ul>
+            <button class="select-plan">Select Plan</button>
+          </article>
+
+          <article class="plan-card recommended" data-price="1800" data-plan="Premium">
+            <div class="recommended-tag">Recommended</div>
+            <div class="plan-head">Premium Plan</div>
+            <div class="plan-price">৳ <span class="price-num">1,800</span></div>
+            <ul class="plan-features">
+              <li>CCTV + Guards</li>
+              <li>Valet Service</li>
+              <li>Priority Spot</li>
+            </ul>
+            <button class="select-plan">Select Plan</button>
+          </article>
+
+          <article class="plan-card" data-price="2600" data-plan="Luxury">
+            <div class="plan-head">Luxury Plan</div>
+            <div class="plan-price">৳ <span class="price-num">2,600</span></div>
+            <ul class="plan-features">
+              <li>Private Zone</li>
+              <li>Car Wash</li>
+              <li>VIP Access</li>
+            </ul>
+            <button class="select-plan">Select Plan</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section alt">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2>About Easy Park Dhaka</h2>
+          <p class="muted">We offer secure parking across multiple Dhaka neighborhoods. Our sites have CCTV, trained staff, and easy digital payments. Book a slot in seconds.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1587270612421-e3f5029e4f88?auto=format&fit=crop&w=800&q=80" alt="Security guard">
+            <h4>Security Guard</h4>
+            <p class="muted">Professional guards on-site to monitor and protect vehicles.</p>
+          </div>
+
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80" alt="Spacious parking area">
+            <h4>Spacious Parking</h4>
+            <p class="muted">Wide, well-marked bays and clear drive lanes.</p>
+          </div>
+
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1605559424843-4cfac7f8c971?auto=format&fit=crop&w=800&q=80" alt="Valet service">
+            <h4>Valet Service</h4>
+            <p class="muted">Available at selected locations for added convenience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>What Customers Say</h2>
+          <p class="muted">Real reviews from Dhaka users.</p>
+        </div>
+
+        <div class="testimonial-wrap">
+          <div class="testimonial-main">
+            <div id="testimonialCarousel" class="carousel">
+              <div class="slide" data-index="0">
+                <p>“Quick booking and safe parking in Gulshan. Staff were friendly.”</p>
+                <div class="author">— Arif H., Gulshan</div>
+              </div>
+
+              <div class="slide hidden" data-index="1">
+                <p>“Premium plan with valet saved me so much time near Banani.”</p>
+                <div class="author">— Nusrat R., Banani</div>
+              </div>
+
+              <div class="slide hidden" data-index="2">
+                <p>“Spacious lots in Dhanmondi and very secure. Recommended.”</p>
+                <div class="author">— Rafiq M., Dhanmondi</div>
+              </div>
+            </div>
+
+            <div class="carousel-controls">
+              <button id="prevTest" class="btn-tertiary">‹</button>
+              <div id="dots" class="dots"></div>
+              <button id="nextTest" class="btn-tertiary">›</button>
+            </div>
+          </div>
+
+          <aside class="testimonial-list">
+            <div class="t-item"><strong>Arif H.</strong><div class="muted">Gulshan</div></div>
+            <div class="t-item"><strong>Nusrat R.</strong><div class="muted">Banani</div></div>
+            <div class="t-item"><strong>Rafiq M.</strong><div class="muted">Dhanmondi</div></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo-small">P</div>
+        <div>
+          <div class="brand-title-2">EASY <span>PARK</span></div>
+          <div class="muted small">Dhaka parking network</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Documentation</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="copyright muted">© <span id="year"></span> Easy Park — All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- LOGIN MODAL -->
+  <div id="modalBackdrop" class="modal-backdrop hidden" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button id="closeModal" class="modal-close" aria-label="Close">&times;</button>
+      <h3 id="loginTitle">Login to Easy Park</h3>
+
+      <form id="loginForm" class="login-form" novalidate>
+        <label class="label">Email</label>
+        <input id="loginEmail" type="email" placeholder="you@example.com" required>
+
+        <label class="label">Password</label>
+        <input id="loginPassword" type="password" placeholder="Enter password" required>
+
+        <div class="modal-actions">
+          <button type="button" id="cancelLogin" class="btn-tertiary">Cancel</button>
+          <button type="submit" class="btn-primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
